@@ -18,43 +18,43 @@ int main(){
    printf("Forneça uma inicial para o seu ESTADO entre A até H\n");
   
    //Criando um caminho para a resposta da pergunta, onde vou guardar a resposta da pergunta dentro da variavel estado, é necessário colocar & (& = endereço) para o computador entender onde é para guardar a resposta (utilizo %s de string para representar que é uma letra/palavra)
-   scanf("%c", &estado);
+   scanf(" %c", estado);
 
    //Criando uma pergunta (entrada de uma informação) direcionada a variavel codigo
    printf("Forneça um código para seu ESTADO de 01 até 04\n");
 
    //Criando um caminho ... linha 17 (utilizo %s de string = letras/palavras)
-   scanf("%s", &codigo);
+   scanf(" %s", codigo);
 
    //Criando uma pergunta (entrada de uma informação) direcionada a variavel nome_cidade
    printf("Forneça um nome para a cidade de seu ESTADO\n");
 
    //Criando um caminho ... linha 17 (utilizo %s de string = letra/palavra)
-   scanf("%s", &nome_cidade);
+   scanf(" %[^\n]", nome_cidade); // Permite espaços (ex: rio de janeiro)
 
    //Criando uma pergunta (entrada de uma informação) direcionada a variavel populacao
    printf("Forneça a população da cidade de %s\n", nome_cidade);
 
    //Criando um caminho ... linha 17 (utilizo %d de decimal = numero inteiro)
-   scanf("%d", &populacao);
+   scanf(" %d", &populacao);
 
    //Criando uma pergunta (entrada de uma informação) direcionada a variavel area_km
    printf("Forneça um tamanho em km² para de %s\n", nome_cidade);
 
    //Criando um caminho ... linha 17 (utilizo %f de float = numero quebrado)
-   scanf("%f", &area_km);
+   scanf(" %f", &area_km);
 
    //Criando uma pergunta (entrada de uma informação) direcionada a variavel pib
    printf("Forneça um PIB para %s\n", nome_cidade);
 
    //Criando um caminho ... linha 17 (utilizo %f de float = numero quebrado)
-   scanf("%f", &pib);
+   scanf(" %f", &pib);
 
    //Criando uma pergunta (entrada de uma informação) direcionada a variavel pontos_turisticos
    printf("Forneça quantos pontos turísticos existem em %s\n", nome_cidade);
 
    //Criando um caminho ... linha 17 (utilizo %d de decimal = numero inteiro)
-   scanf("%d", &pontos_turisticos);
+   scanf(" %d", &pontos_turisticos);
 
    //Perguntas para a carta 2 --->
 
@@ -69,31 +69,31 @@ int main(){
  
    printf("\nCARTA 2\n");
    printf("Forneça uma inicial para o seu SEGUNDO estado entre A até H (Não pode repetir a letra do estado anterior)\n");
-   scanf("%s", &estado2);
+   scanf(" %s", estado2);
  
    printf("Forneça um código para seu ESTADO de 01 até 04\n");
-   scanf("%s", &codigo2);
+   scanf(" %s", codigo2);
  
    printf("Forneça um nome para a cidade de seu ESTADO\n");
-   scanf("%s", &nome_cidade2);
+   scanf(" %[^\n]", nome_cidade2);
  
    printf("Forneça a população da cidade de %s\n", nome_cidade2);
-   scanf("%d", &populacao2);
+   scanf(" %d", &populacao2);
  
    printf("Forneça um tamanho em km² para de %s\n", nome_cidade2);
-   scanf("%f", &area_km2);
+   scanf(" %f", &area_km2);
  
    printf("Forneça um PIB para %s\n", nome_cidade2);
-   scanf("%f", &pib2);
+   scanf(" %f", &pib2);
  
    printf("Forneça quantos pontos turísticos existem em %s\n", nome_cidade2);
-   scanf("%d", &pontos_turisticos2);
+   scanf(" %d", &pontos_turisticos2);
  
 
    //Resultados CARTA 1-->
    printf("\nCarta 1 \n");
    printf("Estado: %s\n", estado);
-   printf("Código: %s%s\n", estado, codigo);
+   printf("Código: %s-%s\n", estado, codigo);
    printf("Nome da Cidade: %s\n", nome_cidade);
    printf("População: %d\n", populacao);
    printf("Área: %.2f km²\n", area_km);
@@ -103,7 +103,7 @@ int main(){
    //Resultados CARTA 2-->
    printf("\nCarta 2 \n");
    printf("Estado: %s\n", estado2);
-   printf("Código: %s%s\n", estado2, codigo2);
+   printf("Código: %s-%s\n", estado2, codigo2);
    printf("Nome da Cidade: %s\n", nome_cidade2);
    printf("População: %d\n", populacao2);
    printf("Área: %.2f km²\n", area_km2);
