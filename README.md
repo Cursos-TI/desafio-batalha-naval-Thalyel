@@ -1,5 +1,5 @@
 ⚠️ Importante!!!
-Você pode escolher qualquer um dos desafios para desenvolver. Sinta-se à vontade para começar pelo desafio que mais lhe interessa.
+Todos os desafios feitos individualmente, sem ajuda de video aula, tutorial ou ajuda de terceiros!
 
 Desafio Super Trunfo - Países - Comparação das Cartas
 Bem-vindo ao desafio "Super Trunfo - Países"! Neste projeto, você desenvolverá um sistema para comparar cartas baseadas em atributos de cidades. O desafio é dividido em três níveis: Novato, Aventureiro e Mestre. Cada nível adiciona novas funcionalidades e complexidades, permitindo um aprendizado progressivo.
