@@ -1,64 +1,75 @@
-⚠️ Importante!!!
-Você pode escolher qualquer um dos desafios para desenvolver. Sinta-se à vontade para começar pelo desafio que mais lhe interessa.
+⚠️ Importante!!! Todos os desafios feitos individualmente, sem ajuda de video aula, tutorial ou ajuda de terceiros!
 
-Desafio de Xadrez - MateCheck
-Bem-vindo ao desafio de Xadrez da MateCheck! Este projeto tem como objetivo testar e determinar os limites de utilização do código dentro do jogo utilizando estruturas de repetição e funções avançadas.
+Desafio Super Trunfo - Países - Cadastro das Cartas - Atualizado: 21/02
+Bem-vindo ao desafio "Super Trunfo - Países"! No jogo Super Trunfo, os jogadores comparam os atributos das cartas para determinar a mais forte. O tema deste Super Trunfo é "Países", onde você comparará os atributos das cidades.
 
-Níveis do Desafio
-🏅 Nível Novato
-A equipe de testes da MateCheck recebeu uma solicitação para determinar os limites de utilização do código dentro do jogo. Para isso, a equipe de programação solicitou o envio de blocos de código contendo loops (estruturas de repetição) para avaliação de desempenho e possibilidades de aplicação.
+A empresa MateCheck contratou você para desenvolver a parte inicial do jogo, que consiste no cadastro das cartas.
 
-Movimentação das Peças:
+O desafio está dividido em três níveis: Novato, Aventureiro e Mestre, com cada nível adicionando mais complexidade ao anterior. Você deve escolher qual desafio quer realizar.
 
-Bispo: 5 casas na diagonal superior direita
-Torre: 5 casas para a direita
-Rainha: 8 casas para a esquerda
-No jogo, apenas possuímos movimentação para quatro direções, mas o Bispo se mexe na diagonal. Com isso, foi adicionada uma condição para movimentação dessa peça, em que, para movê-lo, utilizamos o comando printf e, em seu valor, colocamos a direção usando a combinação de direções básicas.
+🚨 Atenção: O nível Novato do desafio é focado apenas no cadastro das cartas, utilizando as funções scanf para ler os dados e printf para exibi-los.
 
-Requisitos Funcionais:
+🎮 Nível Novato: Cadastro Básico
+No nível Novato, você iniciará criando o sistema básico do jogo Super Trunfo com o tema "Países". As cartas serão divididas por estados, cada um com quatro cidades. Imagine um país dividido em oito estados (A a H), e cada estado com quatro cidades (1 a 4). A combinação forma o código da carta (ex: A01, B02).
 
-Entrada de Dados:
-Os valores necessários devem ser inseridos manualmente a partir de variáveis dentro do código.
-Será permitido o uso de constantes para facilitar a escrita do código e evitar repetição de valores.
-Estruturas de Repetição:
-Os códigos precisam ser desenvolvidos utilizando estruturas de repetição.
-Saída de Dados:
-O sistema deve exibir os resultados de cada procedimento de forma clara e legível.
-Requisitos Não Funcionais:
+🚩 Objetivo: Criar um programa em C que cadastra duas cartas com os seguintes atributos:
 
-Performance:
-O sistema deve executar os cálculos e apresentar os resultados sem atrasos perceptíveis.
-Documentação:
-O código deve ser bem documentado, incluindo comentários detalhados sobre a função de cada parte do código.
-Manutenibilidade:
-O código deve ser escrito de forma clara, empregando nomes de variáveis que permitam o fácil entendimento.
-Instruções Detalhadas:
+População (int)
+Área (float)
+PIB (float)
+Número de pontos turísticos (int)
+⚙️ Funcionalidades do Sistema:
 
-Entrada de Dados:
-Inclua a biblioteca padrão de entrada e saída no início do seu programa.
-Declare variáveis constantes para definir os valores a serem comparados dentro das estruturas condicionais.
-Estruturas de Repetição:
-Utilize cada uma das diferentes estruturas de repetição apresentadas.
-Saída:
-As saídas deverão ser mostradas de forma clara e organizada, com a direção da peça.
-Nomenclatura:
+O sistema permitirá ao usuário cadastrar os dados de duas cartas manualmente via terminal.
+Após o cadastro, o sistema exibirá os dados de cada cidade de forma organizada.
+📥 Entrada e 📤 Saída de Dados:
 
-printf("Cima\n"); printf("Baixo\n"); printf("Esquerda\n"); printf("Direita\n");
+O usuário insere os dados de cada carta interativamente via scanf.
+O programa exibe os dados cadastrados usando printf, com cada atributo em uma nova linha.
+Simplificações para o Nível Novato:
 
-🏅 Nível Aventureiro
-Agora que já conseguimos mover as peças mais simples usando loops, os desenvolvedores pediram para elaborar os loops de outra forma. Para o desafio, moveremos o cavalo, que possui sua movimentação em L. O cavalo deve se movimentar para baixo e para a esquerda, usando pelo menos duas estruturas de repetição: uma deve ser for e a outra pode ser while ou do-while.
+Cadastre apenas duas cartas.
+Concentre-se na leitura, armazenamento e exibição. Não implemente comparações ou outros recursos.
+Não use laços (for, while) ou condicionais (if, else).
+🛡️ Nível Aventureiro: Cálculo de Atributos
+No nível Aventureiro, você expandirá o sistema para incluir o cálculo de dois novos atributos: Densidade Populacional e PIB per Capita.
 
-Movimentação do Cavalo:
+🆕 Diferença em relação ao Nível Novato:
 
-Mover o cavalo em L utilizando loops aninhados. Obs: É obrigatório o uso de loops aninhados.
+Novos Atributos:
+Densidade Populacional: População / Área (float)
+PIB per Capita: PIB / População (float)
+⚙️ Funcionalidades do Sistema:
 
-🥇 Nível Mestre
-Para o desafio final, as peças que utilizam loops simples terão seus códigos trocados por funções recursivas, e a movimentação do cavalo utilizará loops com variáveis múltiplas e/ou condições múltiplas, permitindo o uso de continue e break.
+O sistema calculará automaticamente a Densidade Populacional e o PIB per Capita.
+Os novos atributos serão exibidos junto com os demais.
+📥 Entrada e 📤 Saída de Dados:
 
-Movimentação das Peças:
+Mesma entrada do nível Novato.
+A saída exibirá também os atributos calculados.
+Simplificações para o Nível Intermediário:
 
-Bispo: 5 casas na diagonal direita para cima Torre: 5 casas para a direita Rainha: 8 casas para a esquerda Cavalo: 1 vez em L para cima à direita Obs: É obrigatório o uso de loops aninhados na movimentação do bispo e funções recursivas.
+Continue cadastrando apenas duas cartas.
+Continue sem usar laços (for, while) ou condicionais (if, else).
+🏆 Nível Mestre: Comparação e Super Poder
+No nível Mestre, você implementará a comparação entre duas cartas e o cálculo do "Super Poder".
 
-Ao concluir este desafio, você terá um conhecimento mais profundo de estruturas complexas e elaboradas, amplamente utilizadas no mercado de trabalho. Boa sorte e boa programação!
+🆕 Diferença em relação ao Nível Aventureiro:
 
-Equipe de Ensino - MateCheck
+Comparação de Cartas: O usuário poderá comparar as duas cartas.
+Super Poder: Soma de todos os atributos (inclusive os calculados), com a densidade populacional invertida antes da soma (1/densidade). Tipo: float.
+⚙️ Funcionalidades do Sistema:
+
+Comparação atributo a atributo, mostrando qual carta venceu (1 se a Carta 1 vence, 0 se a Carta 2 vence).
+Para Densidade Populacional, vence a carta com o menor valor.
+Para os demais atributos (e o Super Poder), vence a carta com o maior valor.
+📥 Entrada e 📤 Saída de Dados:
+
+Mesma entrada dos níveis anteriores, mas a População agora é unsigned long int.
+A saída mostrará o resultado da comparação para cada atributo e o Super Poder.
+Observação: Preste atenção à conversão de tipos ao calcular o Super Poder!
+
+🏁 Conclusão
+Ao concluir qualquer um dos níveis, você terá dado um passo importante no desenvolvimento do Super Trunfo - Países. Boa sorte e divirta-se programando!
+
+Equipe de Ensino - MateCheck content_copy

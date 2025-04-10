@@ -1,120 +1,143 @@
 #include <stdio.h>
 
-// Criação da função de chamada para realizar um bloco de código ja pré definido
-void movimento_Torre (int casas){
-   if (casas < 4)
-   {
-      printf("1 casa para Direita\n");
-      movimento_Torre(casas + 1);
-   }
-
-}
-
-// Criação da função de chamada para realizar um bloco de código ja pré definido
-void movimento_Bispo (int casas){
-   for(int casas; casas < 5; casas++){
-      printf("1 casa para Cima\n");
-      for (int i = 0; i < 1; i++)
-      {
-         printf("1 casa para Direita\n");
-      } 
-   }
-}
-
-// Criação da função de chamada para realizar um bloco de código ja pré definido
-void movimento_Rainha (int casas){
-   if (casas < 8)
-   {
-      printf("1 casa para Esquerda\n");
-      movimento_Rainha(casas + 1);
-   }
-}
-
-// Criação da função de chamada para realizar um bloco de código ja pré definido
-void movimento_Cavalo (int casas){
-   int i = 2;
-
-   for (casas; casas < i; casas++)
-   {
-      for(i; i > 0; i--){
-         printf("1 casa para Cima \n");
-      }
-
-      printf("1 casa para Direita \n");
-   }
-}
-
 int main(){
 
-   // Declarando variáveis e seus tipos
-   char movimentacao;
-   int torre = 0, bispo = 0, rainha = 0, cavalo = 0;
+   // Definindo as variaveis de acordo com seu tipo
+   char estado[10];
+   char codigo[5];
+   char nome_cidade[40];
+   unsigned long int populacao;
+   float area_km;
+   float pib;
+   int pontos_turisticos;
+   
 
-   // Menu interativo
-   printf("Qual peça você quer movimentar?\n");
-   printf("T - Torre\n");
-   printf("B - Bispo\n");
-   printf("R - Rainha\n");
-   printf("C - Cavalo\n");
-   scanf("%c", &movimentacao); // endereça a resposta a variavel movimentacao
+   // Perguntas para a carta 1 --->
+   
+   printf("CARTA 1\n");
+   // Criando uma pergunta (entrada de uma informação) direcionada a variavel estado
+   printf("Forneça uma inicial para o seu ESTADO entre A até H\n");
+  
+   // Criando um caminho para a resposta da pergunta, onde vou guardar a resposta da pergunta dentro da variavel estado, é necessário colocar & (& = endereço) para o computador entender onde é para guardar a resposta (utilizo %s de string para representar que é uma letra/palavra)
+   scanf(" %c", estado);
+
+   // Criando uma pergunta (entrada de uma informação) direcionada a variavel codigo
+   printf("Forneça um código para seu ESTADO de 01 até 04\n");
+
+   // Criando um caminho ... linha 17 (utilizo %s de string = letras/palavras)
+   scanf(" %s", codigo);
+
+   // Criando uma pergunta (entrada de uma informação) direcionada a variavel nome_cidade
+   printf("Forneça um nome para a cidade de seu ESTADO\n");
+
+   // Criando um caminho ... linha 17 (utilizo %s de string = letra/palavra)
+   scanf(" %[^\n]", nome_cidade); // Permite espaços (ex: rio de janeiro)
+
+   // Criando uma pergunta (entrada de uma informação) direcionada a variavel populacao
+   printf("Forneça a população da cidade de %s\n", nome_cidade);
+
+   // Criando um caminho ... linha 17 (utilizo %d de decimal = numero inteiro)
+   scanf(" %u", &populacao);
+
+   // Criando uma pergunta (entrada de uma informação) direcionada a variavel area_km
+   printf("Forneça um tamanho em km² para de %s\n", nome_cidade);
+
+   // Criando um caminho ... linha 17 (utilizo %f de float = numero quebrado)
+   scanf(" %f", &area_km);
+
+   // Criando uma pergunta (entrada de uma informação) direcionada a variavel pib
+   printf("Forneça um PIB para %s\n", nome_cidade);
+
+   // Criando um caminho ... linha 17 (utilizo %f de float = numero quebrado)
+   scanf(" %f", &pib);
+
+   // Criando uma pergunta (entrada de uma informação) direcionada a variavel pontos_turisticos
+   printf("Forneça quantos pontos turísticos existem em %s\n", nome_cidade);
+
+   // Criando um caminho ... linha 17 (utilizo %d de decimal = numero inteiro)
+   scanf(" %d", &pontos_turisticos);
+
+
+   // Perguntas para a carta 2 --->
+
+   // Definindo as variaveis de acordo com seu tipo
+   char estado2[10];
+   char codigo2[5];
+   char nome_cidade2[40];
+   unsigned long int populacao2;
+   float area_km2;
+   float pib2;
+   int pontos_turisticos2;
+
+ 
+   printf("\nCARTA 2\n");
+   printf("Forneça uma inicial para o seu SEGUNDO estado entre A até H (Não pode repetir a letra do estado anterior)\n");
+   scanf(" %s", estado2);
+ 
+   printf("Forneça um código para seu ESTADO de 01 até 04\n");
+   scanf(" %s", codigo2);
+ 
+   printf("Forneça um nome para a cidade de seu ESTADO\n");
+   scanf(" %[^\n]", nome_cidade2);
+ 
+   printf("Forneça a população da cidade de %s\n", nome_cidade2);
+   scanf(" %u", &populacao2);
+ 
+   printf("Forneça um tamanho em km² para de %s\n", nome_cidade2);
+   scanf(" %f", &area_km2);
+ 
+   printf("Forneça um PIB para %s\n", nome_cidade2);
+   scanf(" %f", &pib2);
+ 
+   printf("Forneça quantos pontos turísticos existem em %s\n", nome_cidade2);
+   scanf(" %d", &pontos_turisticos2);
  
 
-   switch (movimentacao) {
+   // Definindo as váriaveis de cálculo (primeiro é necessário ter os dados para após isso realizar os calculos, por isso elas são criadas após as perguntas/entrada de dados)
+   float densidade_popu = populacao / area_km;
+   float pib_capital = (pib * 1000000000.0) / populacao;
+   float densidade_popu2 = populacao2 / area_km2;
+   float pib_capital2 = (pib2 * 1000000000.0) / populacao2;
 
-   case 'T':
-   case 't':
+   // Calculo para realizar a comparação entre as cartas
+   float super_Poder_1 = populacao + area_km + pib + pontos_turisticos + pib_capital + (area_km / populacao);
+   float super_Poder_2 = populacao2 + area_km2 + pib2 + pontos_turisticos2 + pib_capital2 + (area_km2 / populacao2);
 
-      printf("\n*** Movimentação Torre ***\n"); // Mensagem unica informando qual peça está sendo movimentada
-      
-   // Chamando a função com bloco de códigos pré definidos acima
-      movimento_Torre(torre);
+   // Resultados CARTA 1-->
+   printf("\nCarta 1 \n");
+   printf("Estado: %s\n", estado);
+   printf("Código: %s-%s\n", estado, codigo);
+   printf("Nome da Cidade: %s\n", nome_cidade);
+   printf("População: %d\n", populacao);
+   printf("Área: %.2f km²\n", area_km);
+   printf("PIB: %.2f bilhões de reais\n", pib);
+   printf("Quantidade de Pontos Turísticos: %d\n", pontos_turisticos);
+   printf("Densidade Populacional: %.2f hab/km²\n", densidade_popu);
+   printf("PIB per Capita: %.2f reais\n", pib_capital);
 
-   break;
-
-   case 'B':
-   case 'b':
-
-      printf("\n*** Movimentação Bispo ***\n"); // Mensagem unica informando qual peça está sendo movimentada
-      
-   // Chamando a função com bloco de códigos pré definidos acima
-      movimento_Bispo(bispo);
-
-   break;
-
-   case 'R':
-   case 'r':
-
-      printf("\n*** Movimentação Rainha ***\n"); // Mensagem unica informando qual peça está sendo movimentada
-
-   // Chamando a função com bloco de códigos pré definidos acima
-      movimento_Rainha(rainha);
-
-   break;
-
-   
-   case 'C':
-   case 'c':
-   
-      printf("\n*** Movimentação Cavalo ***\n"); // Mensagem unica informando qual peça está sendo movimentada
-
-   // Chamando a função com bloco de códigos pré definidos acima
-      movimento_Cavalo(cavalo);
-   
-   break;
-
-      
-   // Criação da função de erro, caso o usuário insira um valor inválido
-   default:
-      printf("Valor inválido, tente novamente!\n");
-   break;
+   // Resultados CARTA 2-->
+   printf("\nCarta 2 \n");
+   printf("Estado: %s\n", estado2);
+   printf("Código: %s-%s\n", estado2, codigo2);
+   printf("Nome da Cidade: %s\n", nome_cidade2);
+   printf("População: %d\n", populacao2);
+   printf("Área: %.2f km²\n", area_km2);
+   printf("PIB: %.2f bilhões de reais\n", pib2);
+   printf("Quantidade de Pontos Turísticos: %d\n", pontos_turisticos2);
+   printf("Densidade Populacional: %.2f hab/km²\n", densidade_popu2);
+   printf("PIB per Capita: %.2f reais\n", pib_capital2);
 
 
-   }
-
-
-
-
-
+   // Resultado da comparação entre as cartas -->
+   printf("\nComparação entre as Cartas\n");
+   printf("Carta vençedora \nCarta 1 = 1 \nCarta 2 = 0\n");
+   printf("População: carta %d venceu \n", populacao > populacao2);
+   printf("Área: carta %d venceu \n", area_km > area_km2);
+   printf("PIB: carta %d venceu \n", pib > pib2);
+   printf("Pontos Turísticos: carta %d venceu \n", pontos_turisticos > pontos_turisticos2);
+   printf("Densidade Populacional: carta %d venceu \n", densidade_popu > densidade_popu2);
+   printf("PIB per Capita: carta %d venceu \n", pib_capital > pib_capital2);
+   printf("Super Poder: carta %d venceu \n", super_Poder_1 > super_Poder_2);
 
 
    return 0;

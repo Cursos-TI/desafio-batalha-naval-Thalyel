@@ -10,7 +10,6 @@ int main(){
    float area_km;
    float pib;
    int pontos_turisticos;
-   
 
    //Perguntas para a carta 1 --->
    
@@ -57,7 +56,6 @@ int main(){
    //Criando um caminho ... linha 17 (utilizo %d de decimal = numero inteiro)
    scanf(" %d", &pontos_turisticos);
 
-
    //Perguntas para a carta 2 --->
 
    //Definindo as variaveis de acordo com seu tipo
@@ -68,7 +66,6 @@ int main(){
    float area_km2;
    float pib2;
    int pontos_turisticos2;
-
  
    printf("\nCARTA 2\n");
    printf("Forneça uma inicial para o seu SEGUNDO estado entre A até H (Não pode repetir a letra do estado anterior)\n");
@@ -93,13 +90,6 @@ int main(){
    scanf(" %d", &pontos_turisticos2);
  
 
-   //Definindo as váriaveis de cálculo (primeiro é necessário ter os dados para após isso realizar os calculos, por isso elas são criadas após as perguntas/entrada de dados)
-   float densidade_popu = populacao / area_km;
-   float pib_capital = (pib * 1000000000.0) / populacao;
-   float densidade_popu2 = populacao2 / area_km2;
-   float pib_capital2 = (pib2 * 1000000000.0) / populacao2;
-
-
    //Resultados CARTA 1-->
    printf("\nCarta 1 \n");
    printf("Estado: %s\n", estado);
@@ -109,8 +99,6 @@ int main(){
    printf("Área: %.2f km²\n", area_km);
    printf("PIB: %.2f bilhões de reais\n", pib);
    printf("Quantidade de Pontos Turísticos: %d\n", pontos_turisticos);
-   printf("Densidade Populacional: %.2f hab/km²\n", densidade_popu);
-   printf("PIB per Capita: %.2f reais\n", pib_capital);
 
    //Resultados CARTA 2-->
    printf("\nCarta 2 \n");
@@ -121,8 +109,6 @@ int main(){
    printf("Área: %.2f km²\n", area_km2);
    printf("PIB: %.2f bilhões de reais\n", pib2);
    printf("Quantidade de Pontos Turísticos: %d\n", pontos_turisticos2);
-   printf("Densidade Populacional: %.2f hab/km²\n", densidade_popu2);
-   printf("PIB per Capita: %.2f reais\n", pib_capital2);
 
    return 0;
 }
