@@ -130,93 +130,23 @@ int main(){
 
    // Comparação entre as cartas -->
 
-   int (atributo_Escolhido);
-
-   // Criando um menu interativo para escolha
-   printf("\n*** Selecione um atributo para comparação ***\n");
-   printf("1 - População \n");
-   printf("2 - Área \n");
-   printf("3 - PIB \n");
-   printf("4 - Número de pontos turísticos \n");
-   printf("5 - Densidade Populacional \n");
-   scanf("%d", &atributo_Escolhido);
-
-
-   switch (atributo_Escolhido) { // Variavel que responde de acordo com o que foi escolhido pelo usuario no menu interativo
-
-   case 1: // Caso seja escolhido o numero 1, realize o código a baixo ->
-      printf("%s vs %s \n", nome_cidade, nome_cidade2);
-      printf("Atributo escolhido: População \n");
-      printf("%d pessoas vs %d pessoas \n", populacao, populacao2);  
-      
-      if(populacao == populacao2){
-         printf("### Empate! ###");
-      } else if (populacao > populacao2){
-         printf("### %s venceu! ###", nome_cidade);
-      } else {
-         printf("### %s venceu! ###", nome_cidade2);
-      }
-      break;
-
-   case 2: // Caso seja escolhido o numero 2, realize o código a baixo ->
-      printf("%s vs %s \n", nome_cidade, nome_cidade2);
-      printf("Atributo escolhido: Área \n");
-      printf("%.2f km² vs %.2f km²\n", area_km, area_km2);  
-   
-      if(area_km == area_km2){
-         printf("### Empate! ###");
-      } else if (area_km > area_km2){
-         printf("### %s venceu! ###", nome_cidade);
-      } else {
-         printf("### %s venceu! ###", nome_cidade2);
-      }
-      break;
-      
-   case 3: // Caso seja escolhido o numero 3, realize o código a baixo ->
-      printf("%s vs %s \n", nome_cidade, nome_cidade2);
-      printf("Atributo escolhido: PIB \n");
-      printf("%.2fB R$ vs %.2fB R$\n", pib, pib2);  
-
-      if(pib == pib2){
-         printf("### Empate! ###");
-      } else if (pib > pib2){
-         printf("### %s venceu! ###", nome_cidade);
-      } else {
-         printf("### %s venceu! ###", nome_cidade2);
-      }
-      break;
-
-   case 4: // Caso seja escolhido o numero 4, realize o código a baixo ->
-      printf("%s vs %s \n", nome_cidade, nome_cidade2);
-      printf("Atributo escolhido: Pontos Turísticos \n");
-      printf("%d locais vs %d locais \n", pontos_turisticos, pontos_turisticos2);  
-
-      if(pontos_turisticos == pontos_turisticos2){
-         printf("### Empate! ###");
-      } else if (pontos_turisticos > pontos_turisticos2){
-         printf("### %s venceu! ###", nome_cidade);
-      } else {
-         printf("### %s venceu! ###", nome_cidade2);
-      }
-      break;
-
-   case 5: // Caso seja escolhido o numero 5, realize o código a baixo ->
-      printf("%s vs %s \n", nome_cidade, nome_cidade2);
-      printf("Atributo escolhido: Densidade Populacional \n");
-      printf("%.2f hab/km² vs %.2f hab/km² \n", densidade_popu, densidade_popu2);  
-
-      if(densidade_popu == densidade_popu2){
-         printf("### Empate! ###");
-      } else if (densidade_popu < densidade_popu2){
-         printf("### %s venceu! ###", nome_cidade);
-      } else {
-         printf("### %s venceu! ###", nome_cidade2);
-      }
-      break;
-
-   default:
-      printf("Valor inválido \n");
-      break;
+   if(area_km > area_km2){ // Se a area1 for MAIOR que area2, então realize todos os comandos abaixo
+      printf("\nComparação de cartas (Atributo: Área)\n");
+      printf("Carta 1 - %s: %.2f \n", nome_cidade, area_km);
+      printf("Carta 2 - %s: %.2f \n", nome_cidade2, area_km2);
+      printf("Resultado: Carta 1 - (%s) venceu! \n", nome_cidade);
+   }
+   else if (area_km2 > area_km){ // Se a area2 for MAIOR que area1, então realize todos os comandos abaixo
+      printf("\nComparação de cartas (Atributo: Área)\n");
+      printf("Carta 1 - %s: %.2f \n", nome_cidade, area_km);
+      printf("Carta 2 - %s: %.2f \n", nome_cidade2, area_km2);
+      printf("Resultado: Carta 2 - (%s) venceu! \n", nome_cidade2);
+   }
+   else { // Se a area1 não é maior e nem menor que a area2, então as 2 tem o mesmo tamanho, sendo assim realize todos os comandos abaixo
+      printf("\nComparação de cartas (Atributo: Área)\n");
+      printf("Carta 1 - %s: %.2f \n", nome_cidade, area_km);
+      printf("Carta 2 - %s: %.2f \n", nome_cidade2, area_km2);
+      printf("Resultado: Carta 1 e 2 empataram! \n");
    }
 
 
